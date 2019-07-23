@@ -1,0 +1,152 @@
+.features {
+  background-image: url('../img/bg-back-mobile@1x.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+
+  text-align: center;
+}
+
+.features__lead {
+  margin-top: 90px;
+  margin-bottom: 124px;
+}
+
+.features__title,
+.features__item-title,
+.features-sub-list__title {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0 35px;
+
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.features__description {
+  margin-bottom: 30px;
+  padding: 0 25px;
+
+  font-size: 14px;
+  line-height: 26px;
+  color: #333333;
+}
+
+.features__list,
+.features__item-list {
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+.features__item-image {
+  display: block;
+  margin: 0 auto;
+}
+
+.features__item:first-child .features__item-text,
+.features__item:nth-child(3) .features__item-text {
+  padding: 40px 27px;
+
+  color: #ffffff;
+  background-color: #81b3d2;
+}
+
+.features__item.features__item-text {
+  position: relative;
+
+  padding: 28px 27px;
+
+  background-color: #eeeeee;
+}
+
+.features__item.features__item-text:not(:last-of-type)::after {
+  content: '';
+
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  right: 20px;
+
+  height: 1px;
+
+  background-color: #d6d6d6;
+}
+
+.features__item.features__item-text p {
+  color: #333333;
+}
+
+.features__item-text p {
+  margin: 0;
+  margin-bottom: 10px;
+
+  line-height: 21px;
+}
+
+.features__item-text p:last-of-type {
+  margin-bottom: 0;
+}
+
+.features-sub-list {
+  padding: 35px 40px 35px 70px;
+
+  text-align: left;
+}
+
+.features-sub-list__title {
+  position: relative;
+
+  margin-bottom: 15px;
+}
+
+.features-sub-list__text {
+  margin: 0;
+}
+
+.features-sub-list__title::before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 12px;
+
+  position: absolute;
+  left: -47px;
+  top: -10px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.icon-house::before {
+  width: 39px;
+  height: 37px;
+
+  background-image: url(../img/icon-house.svg);
+}
+
+.icon-gift::before {
+  width: 32px;
+  height: 38px;
+
+  background-image: url(../img/icon-gift.svg);
+}
+
+.icon-burger::before {
+  width: 40px;
+  height: 35px;
+
+  background-image: url(../img/icon-burger.svg);
+}
+
+.features-sub-list__text {
+  margin: 0;
+  margin-bottom: 25px;
+
+  color: #333333;
+}
+
+.features-sub-list__item:last-child .features-sub-list__text {
+  margin-bottom: 0;
+}
