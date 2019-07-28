@@ -1,0 +1,63 @@
+.features-sub-list {
+  padding: 35px 40px 35px 70px;
+
+  text-align: left;
+}
+
+.features-sub-list__title {
+  position: relative;
+
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0 35px;
+
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.features-sub-list__title::before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 12px;
+
+  position: absolute;
+  left: -47px;
+  top: -10px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.icon-house::before {
+  width: 39px;
+  height: 37px;
+
+  background-image: url(../img/icon-house.svg);
+}
+
+.icon-gift::before {
+  width: 32px;
+  height: 38px;
+
+  background-image: url(../img/icon-gift.svg);
+}
+
+.icon-burger::before {
+  width: 40px;
+  height: 35px;
+
+  background-image: url(../img/icon-burger.svg);
+}
+
+.features-sub-list__text {
+  margin: 0;
+  margin-bottom: 25px;
+
+  color: #333333;
+}
+
+.features-sub-list__item:last-child .features-sub-list__text {
+  margin-bottom: 0;
+}
