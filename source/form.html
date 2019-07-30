@@ -30,8 +30,8 @@
         <h1 class="pool-form__title">Оставьте свой отзыв</h1>
         <p class="pool-form__description">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         <form class="pool-form__form form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset>
-            <legend>Представьтесь:</legend>
+          <fieldset class="form__item">
+            <legend class="form__item-description">Представьтесь:</legend>
             <label for="name-field">Имя<span>*</span>:</label>
             <input id="name-field" type="text" name="name" placeholder="Петр" required>
             <label for="surname-field">Фамилия<span>*</span>:</label>
@@ -39,16 +39,17 @@
             <label for="middle-name-field">Отчество:</label>
             <input id="middle-name-field" type="text" name="middle-name" placeholder="Александрович">
           </fieldset>
-          <fieldset>
-            <legend>Контактная информация:</legend>
+
+          <fieldset class="form__item">
+            <legend class="form__item-description">Контактная информация:</legend>
             <label for="phone-field">Контактный телефон<span>*</span>:</label>
             <input id="phone-field" type="tel" name="phone" placeholder="Введите телефон" required>
             <label for="surname-field">Электронная почта<span>*</span>:</label>
             <input id="surname-field" type="email" name="surname" placeholder="Введите e-mail" required>
           </fieldset>
 
-          <fieldset class="form__impression">
-            <legend>Ваше общее впечатление:</legend>
+          <fieldset class="form__item form__item--impression">
+            <legend class="form__item-description">Ваше общее впечатление:</legend>
             <label>
               <input type="radio" name="impression" value="good" checked>
               Скорее положительное
@@ -63,8 +64,8 @@
             </label>
           </fieldset>
 
-          <fieldset class="form__sights">
-            <legend>Посещенные достопримечательности:</legend>
+          <fieldset class="form__item form__item--sights">
+            <legend class="form__item-description">Посещенные достопримечательности:</legend>
             <label>
               <input type="checkbox" name="devils-bridge" checked>
               Мост Дьявола
