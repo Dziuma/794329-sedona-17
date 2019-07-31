@@ -3,13 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>Седона</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 
     <header class="page-header">
       <nav class="main-nav">
-        <a class="page-header__logo">
-          <img class="page-header__logo-image" src="" width="102" height="83" alt="Логотип Седона">
+        <a class="main-nav__logo">
+          <img class="main-nav__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип Седона">
         </a>
         <button class="main-nav__toggler" type="button">Открыть меню</button>
         <ul class="main-nav__list navigation-list">
@@ -23,11 +24,14 @@
 
     <main class="page-main">
       <section class="pool-form">
+        <div class="sedona-text">
+          <img class="sedona-text__image" src="img/text-sedona.svg" width="229" height="39" alt="Седона">
+        </div>
         <h1 class="pool-form__title">Оставьте свой отзыв</h1>
         <p class="pool-form__description">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         <form class="pool-form__form form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset>
-            <legend>Представтесь:</legend>
+          <fieldset class="form__item">
+            <legend class="form__item-description">Представьтесь:</legend>
             <label for="name-field">Имя<span>*</span>:</label>
             <input id="name-field" type="text" name="name" placeholder="Петр" required>
             <label for="surname-field">Фамилия<span>*</span>:</label>
@@ -35,16 +39,17 @@
             <label for="middle-name-field">Отчество:</label>
             <input id="middle-name-field" type="text" name="middle-name" placeholder="Александрович">
           </fieldset>
-          <fieldset>
-            <legend>Контактная информация:</legend>
+
+          <fieldset class="form__item">
+            <legend class="form__item-description">Контактная информация:</legend>
             <label for="phone-field">Контактный телефон<span>*</span>:</label>
             <input id="phone-field" type="tel" name="phone" placeholder="Введите телефон" required>
             <label for="surname-field">Электронная почта<span>*</span>:</label>
             <input id="surname-field" type="email" name="surname" placeholder="Введите e-mail" required>
           </fieldset>
 
-          <fieldset>
-            <legend>Ваше общее впечатление:</legend>
+          <fieldset class="form__item form__item--impression">
+            <legend class="form__item-description">Ваше общее впечатление:</legend>
             <label>
               <input type="radio" name="impression" value="good" checked>
               Скорее положительное
@@ -59,8 +64,8 @@
             </label>
           </fieldset>
 
-          <fieldset>
-            <legend>Посещенные достопримечательности:</legend>
+          <fieldset class="form__item form__item--sights">
+            <legend class="form__item-description">Посещенные достопримечательности:</legend>
             <label>
               <input type="checkbox" name="devils-bridge" checked>
               Мост Дьявола
@@ -81,10 +86,10 @@
 
           <fieldset>
             <legend>Опишите свои эмоции:</legend>
-            <textarea id="review" name="review" rows="5">Опишите подробно все свои восторги</textarea>
+            <textarea id="review" name="review" rows="3">Опишите подробно все свои восторги</textarea>
           </fieldset>
 
-          <button type="submit">Отправить отзыв</button>
+          <button class="form__submit-btn" type="submit">Отправить отзыв</button>
         </form>
       </section>
     </main>
@@ -93,18 +98,18 @@
       <span class="page-footer__hashtag">#VisitSedona</span>
         <ul class="page-footer__social social">
           <li class="social__item">
-            <a class="social__link social__link--twitter visually-hidden" href="#">Мы в Твиттере</a>
+            <a class="social__link social__link--twitter" href="#"><span class="visually-hidden">Мы в Твиттере</span></a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--facebook visually-hidden" href="#">Мы в Фейсбуке</a>
+            <a class="social__link social__link--facebook" href="#"><span class="visually-hidden">Мы в Фейсбуке</span></a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--youtube visually-hidden" href="#">Мы на Ютуб</a>
+            <a class="social__link social__link--youtube" href="#"><span class="visually-hidden">Мы на Ютуб</span></a>
           </li>
         </ul>
       <div class="page-footer__copyright copyright">
         <span class="copyright__text">Разработано</span>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy"><img src="img/logo-html.svg" width="27" height="34" alt="HTML Academy"></a>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy"><img src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy"></a>
       </div>
     </footer>
 
