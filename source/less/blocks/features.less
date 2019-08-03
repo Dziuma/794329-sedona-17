@@ -6,6 +6,19 @@
   text-align: center;
 }
 
+@media (min-width: 768px) {
+  .features {
+    width: 768px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .features {
+    width: 1200px;
+  }
+}
+
 .features__lead {
   margin-top: 90px;
   margin-bottom: 124px;
@@ -15,10 +28,17 @@
 .features__item-title {
   margin: 0;
   margin-bottom: 10px;
-  padding: 0 35px;
+  padding: 0 30px;
 
   font-size: 18px;
   line-height: 26px;
+}
+
+@media (min-width: 768px) {
+  .features__title,
+  .features__item-title {
+    font-size: 21px;
+  }
 }
 
 .features__description {
@@ -31,16 +51,44 @@
 }
 
 .features__list,
-.features__item-list {
+.features__item-list,
+.features__item-wrapper {
   list-style: none;
 
   margin: 0;
   padding: 0;
 }
 
+@media (min-width: 768px) {
+  .features__item {
+    display: flex;
+  }
+
+  .features__item-text {
+    width: 256px;
+  }
+
+  .features__item:nth-child(3) .features__item-text {
+    order: 1;
+  }
+}
+
+@media (min-width: 1200px) {
+  .features__item-text {
+    width: 400px;
+  }
+}
+
 .features__item-image {
   display: block;
   margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .features__item-image {
+    flex-grow: 1;
+    height: 256px;
+  }
 }
 
 .features__item:first-child .features__item-text,
@@ -72,6 +120,41 @@
   background-color: #d6d6d6;
 }
 
+@media (min-width: 768px) {
+  .features__item-wrapper {
+    display: flex;
+  }
+
+  .features__item-text-only {
+    width: 256px;
+    padding: 45px 49px;
+    box-sizing: border-box;
+  }
+
+  .features__item-text-only:nth-child(2) {
+    padding: 45px 55px;
+  }
+
+  .features__item-text-only::after {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .features__item-text-only {
+    width: 400px;
+    padding-bottom: 60px;
+  }
+
+  .features__item-text-only:nth-child(2) {
+    padding: 45px 65px;
+  }
+
+  .features__item-text-only .features__item-title {
+    padding: 0 71px;
+  }
+}
+
 .features__item-text-only p {
   color: #333333;
 }
@@ -85,4 +168,10 @@
 
 .features__item-text p:last-of-type {
   margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .features__item-text p {
+    margin-bottom: 0;
+  }
 }
