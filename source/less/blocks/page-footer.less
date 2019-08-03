@@ -4,6 +4,24 @@
   text-align: center;
 }
 
+@media (min-width: 768px) {
+  .page-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 768px;
+    margin: 0 auto;
+    padding: 36px 60px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .page-footer {
+    width: 1200px;
+    padding: 36px 120px;
+  }
+}
+
 .page-footer__hashtag {
   display: block;
   margin-bottom: 30px;
@@ -11,4 +29,10 @@
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .page-footer__hashtag {
+    margin-bottom: 0;
+  }
 }
