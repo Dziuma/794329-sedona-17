@@ -23,9 +23,23 @@
   line-height: 24px;
 }
 
+@media (min-width: 768px) {
+  .find-map__description {
+    padding: 0 185px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .find-map__description {
+    padding: 0 402px;
+    margin-bottom: 50px;
+  }
+}
+
 .find-map__link {
   display: block;
-  width: calc(100% - 40px);
+  width: 280px;
   margin: 0 20px 50px;
   padding: 16px 0;
 
@@ -36,6 +50,20 @@
   text-align: center;
 
   background-color: #81b3d2;
+}
+
+@media (min-width: 768px) {
+  .find-map__link {
+    min-width: 458px;
+    margin: 0 auto;
+    margin-bottom: 58px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .find-map__link {
+    margin-bottom: 66px;
+  }
 }
 
 .find-map__google-maps {
