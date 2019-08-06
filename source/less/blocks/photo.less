@@ -1,14 +1,41 @@
-.photo__image {
+@media (min-width: 1200px) {
+  .photo {
+    position: relative;
+  }
+}
+
+.photo__image img {
   display: block;
   margin: 0 auto;
-  margin-bottom: 10px;
 }
 
 .photo__description {
-  padding: 0 20px;
+  padding: 20px;
 
   text-align: left;
   line-height: 24px;
+}
+
+@media (min-width: 768px) {
+  .photo__description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .photo__description {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
 }
 
 .photo__title,
