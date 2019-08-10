@@ -1,0 +1,41 @@
+.input-field {
+  position: relative;
+}
+
+@media (min-width: 1200px) {
+  .input-field {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .input-field__hide {
+    display: none;
+  }
+
+  .input-field:first-of-type {
+    margin-right: 78px;
+  }
+}
+
+.input-field__icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  display: block;
+  width: 58px;
+  height: 58px;
+
+  background-color: #e6e6e6;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.input-field__icon--phone {
+  background-image: url(../img/icon-phone.svg);
+}
+
+.input-field__icon--mail {
+  background-image: url(../img/icon-mail.svg);
+}
