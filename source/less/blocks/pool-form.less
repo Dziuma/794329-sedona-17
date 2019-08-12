@@ -1,8 +1,21 @@
 .pool-form {
   padding-bottom: 40px;
+  box-sizing: border-box;
+
   text-align: center;
 }
 
+@media (min-width: 768px) {
+  .pool-form {
+    padding: 0 60px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .pool-form {
+    padding: 0 120px;
+  }
+}
 .pool-form__title {
   margin: 0;
   margin-bottom: 30px;
@@ -12,6 +25,12 @@
   font-weight: bold;
 }
 
+@media (min-width: 768px) {
+  .pool-form__title {
+    font-size: 30px;
+  }
+}
+
 .pool-form__description {
   margin: 0;
   padding: 0 20px 20px;
@@ -19,4 +38,17 @@
 
   line-height: 24px;
   color: #333333;
+}
+
+@media (min-width: 768px) {
+  .pool-form__description {
+    padding: 0 105px 70px;
+    border-bottom: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .pool-form__description {
+    padding: 0 260px 60px;
+  }
 }

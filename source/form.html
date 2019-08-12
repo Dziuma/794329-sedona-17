@@ -58,11 +58,17 @@
             </fieldset>
 
             <fieldset class="form__item form__item--contacts">
-              <legend class="form__item-description">Контактная информация:</legend>
-              <label for="phone-field">Контактный телефон<span>*</span>:</label>
+            <legend class="form__item-description">Контактная информация:</legend>
+            <div class="input-field">
+              <label for="phone-field"><span class="input-field__hide">Контактный</span> телефон<span>*</span>:</label>
               <input id="phone-field" type="tel" name="phone" placeholder="Введите телефон" required>
-              <label for="surname-field">Электронная почта<span>*</span>:</label>
-              <input id="surname-field" type="email" name="surname" placeholder="Введите e-mail" required>
+              <span class="input-field__icon input-field__icon--phone"></span>
+            </div>
+            <div class="input-field">
+            <label for="surname-field">Электронная почта<span>*</span>:</label>
+            <input id="surname-field" type="email" name="surname" placeholder="Введите e-mail" required>
+            <span class="input-field__icon input-field__icon--mail"></span>
+            </div>
             </fieldset>
 
             <fieldset class="form__item form__item--impression">
@@ -83,22 +89,32 @@
 
             <fieldset class="form__item form__item--sights">
               <legend class="form__item-description">Посещенные достопримечательности:</legend>
-              <label>
-                <input type="checkbox" name="devils-bridge" checked>
-                Мост Дьявола
-              </label>
-              <label>
-                <input type="checkbox" name="mountain-bell" checked>
-                Гора-Колокол
-              </label>
-              <label>
-                <input type="checkbox" name="slide-park" checked>
-                Слайд-парк
-              </label>
-              <label>
-                <input type="checkbox" name="red-rocks">
-                Красные скалы
-              </label>
+              <ul class="form__item--sights-list">
+                <li>
+                  <label>
+                    <input type="checkbox" name="devils-bridge" checked>
+                    Мост Дьявола
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" name="mountain-bell" checked>
+                    Гора-Колокол
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" name="slide-park" checked>
+                    Слайд-парк
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" name="red-rocks">
+                    Красные скалы
+                  </label>
+                </li>
+              </ul>
             </fieldset>
 
             <fieldset class="form__item form__item--message">
@@ -107,6 +123,7 @@
             </fieldset>
 
             <button class="form__submit-btn" type="submit">Отправить отзыв</button>
+            <span class="form__required-text">* – Обязательные поля</span>
           </form>
         </section>
       </main>
