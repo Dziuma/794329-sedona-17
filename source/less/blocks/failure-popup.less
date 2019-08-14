@@ -1,8 +1,16 @@
 .failure-popup {
+  display: none;
+  width: 320px;
   padding: 35px 45px;
+  box-sizing: border-box;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   text-align: center;
-
+  background-color: #ffffff;
   box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.15);
 }
 
@@ -36,4 +44,27 @@
   background-color: #81b3d2;
 
   cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .failure-popup {
+    width: 400px;
+    padding: 60px 45px 50px;
+  }
+
+  .failure-popup__title {
+    padding: 0 30px;
+    margin-bottom: 30px;
+
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .failure-popup__text {
+    margin-bottom: 35px;
+  }
+
+  .failure-popup__close-btn {
+    width: 272px;
+  }
 }
