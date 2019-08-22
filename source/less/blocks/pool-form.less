@@ -1,5 +1,6 @@
 .pool-form {
-  padding-bottom: 40px;
+  min-height: 1866px; //Временно для сетки
+  padding: 37px 0 40px;
   box-sizing: border-box;
 
   text-align: center;
@@ -7,18 +8,21 @@
 
 @media (min-width: 768px) {
   .pool-form {
-    padding: 0 60px;
+    min-height: 1660px; //Временно для сетки
+    padding: 76px 60px 0;
   }
 }
 
 @media (min-width: 1200px) {
   .pool-form {
-    padding: 0 120px;
+    min-height: 1498px; //Временно для сетки
+    padding: 113px 120px 0;
   }
 }
+
 .pool-form__title {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 27px;
 
   font-size: 18px;
   line-height: 26px;
@@ -27,13 +31,15 @@
 
 @media (min-width: 768px) {
   .pool-form__title {
+    margin-bottom: 30px;
+
     font-size: 30px;
   }
 }
 
 .pool-form__description {
   margin: 0;
-  padding: 0 20px 20px;
+  padding: 0 20px 17px;
   border-bottom: 1px solid #e5e5e5;
 
   line-height: 24px;
