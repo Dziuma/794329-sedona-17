@@ -1,0 +1,93 @@
+.button {
+  border: none;
+
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: #81b3d2;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+    color: #88b6d1;
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+    color: #ffffff;
+    cursor: not-allowed;
+  }
+}
+
+.button--submit-form {
+  width: calc(100% - 40px);
+  padding: 16px 0;
+  margin: 0 20px;
+}
+
+@media (min-width: 768px) {
+  .button--submit-form {
+    width: 324px;
+    margin: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .button--submit-form {
+    width: 480px;
+  }
+}
+
+.button--map-link {
+  display: block;
+  width: 280px;
+  margin: 0 20px 50px;
+  padding: 15px 0 17px;
+}
+
+@media (min-width: 768px) {
+  .button--map-link {
+    min-width: 458px;
+    margin: 0 auto;
+    margin-bottom: 58px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .button--map-link {
+    margin-bottom: 66px;
+  }
+}
+
+.button--failure-close {
+  width: 180px;
+  border: none;
+  padding: 16px 0;
+}
+
+@media (min-width: 768px) {
+  .button--failure-close {
+    width: 272px;
+  }
+}
+
+.button--success-close {
+  width: 100%;
+  border: none;
+  padding: 16px 0;
+}
+
+@media (min-width: 768px) {
+  .button--success-close {
+    width: 458px;
+  }
+}
