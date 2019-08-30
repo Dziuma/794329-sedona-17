@@ -59,30 +59,35 @@
 
             <fieldset class="form__item form__item--contacts">
             <legend class="form__item-description">Контактная информация:</legend>
-            <div class="input-field">
-              <label for="phone-field"><span class="input-field__hide">Контактный</span> телефон<span>*</span>:</label>
-              <input id="phone-field" type="tel" name="phone" placeholder="Введите телефон" required>
-              <span class="input-field__icon input-field__icon--phone"></span>
-            </div>
-            <div class="input-field">
-            <label for="surname-field">Электронная почта<span>*</span>:</label>
-            <input id="surname-field" type="email" name="surname" placeholder="Введите e-mail" required>
-            <span class="input-field__icon input-field__icon--mail"></span>
+            <div class="form__item--contacts-wrapper">
+              <div class="input-field">
+                <label for="phone-field"><span class="input-field__hide">Контактный</span> телефон<span>*</span>:</label>
+                <input id="phone-field" type="tel" name="phone" placeholder="Введите телефон" required>
+                <span class="input-field__icon input-field__icon--phone"></span>
+              </div>
+              <div class="input-field">
+                <label for="surname-field">Электронная почта<span>*</span>:</label>
+                <input id="surname-field" type="email" name="surname" placeholder="Введите e-mail" required>
+                <span class="input-field__icon input-field__icon--mail"></span>
+              </div>
             </div>
             </fieldset>
 
             <fieldset class="form__item form__item--impression">
               <legend class="form__item-description">Ваше общее впечатление:</legend>
-              <label>
-                <input type="radio" name="impression" value="good" checked>
+              <label class="custom-radio">
+                <input class="custom-radio__input visually-hidden" type="radio" name="impression" value="good" checked>
+                <span class="custom-radio__mark"></span>
                 Скорее положительное
               </label>
-              <label>
-                <input type="radio" name="impression" value="bad">
+              <label class="custom-radio">
+                <input class="custom-radio__input visually-hidden" type="radio" name="impression" value="bad">
+                <span class="custom-radio__mark"></span>
                 Скорее отрицательное
               </label>
-              <label>
-                <input type="radio" name="impression" value="neutral">
+              <label class="custom-radio">
+                <input class="custom-radio__input visually-hidden" type="radio" name="impression" value="neutral">
+                <span class="custom-radio__mark"></span>
                 Затрудняюсь ответить
               </label>
             </fieldset>
@@ -91,26 +96,30 @@
               <legend class="form__item-description">Посещенные достопримечательности:</legend>
               <ul class="form__item--sights-list">
                 <li>
-                  <label>
-                    <input type="checkbox" name="devils-bridge" checked>
+                  <label class="custom-checkbox">
+                    <input class="custom-checkbox__input visually-hidden" type="checkbox" name="devils-bridge" checked>
+                    <span class="custom-checkbox__mark"></span>
                     Мост Дьявола
                   </label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" name="mountain-bell" checked>
+                  <label class="custom-checkbox">
+                    <input class="custom-checkbox__input visually-hidden" type="checkbox" name="mountain-bell" checked>
+                    <span class="custom-checkbox__mark"></span>
                     Гора-Колокол
                   </label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" name="slide-park" checked>
+                  <label class="custom-checkbox">
+                    <input class="custom-checkbox__input visually-hidden" type="checkbox" name="slide-park" checked>
+                    <span class="custom-checkbox__mark"></span>
                     Слайд-парк
                   </label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" name="red-rocks">
+                  <label class="custom-checkbox">
+                    <input class="custom-checkbox__input visually-hidden" type="checkbox" name="red-rocks">
+                    <span class="custom-checkbox__mark"></span>
                     Красные скалы
                   </label>
                 </li>
@@ -119,10 +128,10 @@
 
             <fieldset class="form__item form__item--message">
               <legend class="form__item-description">Опишите свои эмоции:</legend>
-              <textarea id="review" name="review" rows="3">Опишите подробно все свои восторги</textarea>
+              <textarea id="review" name="review" rows="5">Опишите подробно все свои восторги</textarea>
             </fieldset>
 
-            <button class="form__submit-btn" type="submit">Отправить отзыв</button>
+            <button class="button button--submit-form" type="submit">Отправить отзыв</button>
             <span class="form__required-text">* – Обязательные поля</span>
           </form>
         </section>
@@ -150,14 +159,14 @@
       <section class="failure-popup">
         <h2 class="failure-popup__title">Что-то пошло не так!</h2>
         <p class="failure-popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-        <button class="failure-popup__close-btn" type="button">Ок</button>
+        <button class="button button--failure-close" type="button">Ок</button>
       </section>
 
       <section class="success-popup">
         <h2 class="success-popup__title">Ваш отзыв отправлен!</h2>
         <p class="success-popup__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br> В ближайшее время мы опубликуем его на сайте.</p>
         <div class="success-popup__close-btn-container">
-          <button class="success-popup__close-btn" type="button">Закрыть окно</button>
+          <button class="button button--success-close" type="button">Закрыть окно</button>
         </div>
       </section>
 
