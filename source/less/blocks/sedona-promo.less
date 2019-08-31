@@ -11,6 +11,13 @@
   text-align: center;
 }
 
+@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .sedona-promo {
+    background-image: url(../img/bg-back-tablet@2x.jpg);
+    background-size: 768px auto;
+  }
+}
+
 .sedona-promo--main {
   padding: 90px 0 80px 0;
   margin-bottom: 5px;
@@ -38,16 +45,47 @@
 @media (min-width: 768px) {
   .sedona-promo {
     padding: 95px 0 149px 0;
+
+    background-image: url(../img/bg-back-tablet@1x.jpg);
   }
 
   .sedona-promo--main {
     height: 518px;
     padding: 77px 0 91px 0;
   }
+
+  .sedona-promo::after {
+    width: 768px;
+    height: 57px;
+
+    background-image: url(../img/bg-intro-triangle-tablet.svg);
+  }
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .sedona-promo {
+      background-image: url(../img/bg-back-tablet@2x.jpg);
+      background-size: 1200px auto;
+    }
+  }
 }
 
 @media (min-width: 1200px) {
   .sedona-promo {
     padding: 103px 0 152px 0;
+
+    background-image: url(../img/bg-back-desktop@1x.jpg);
+  }
+
+  .sedona-promo::after {
+    width: 1200px;
+
+    background-image: url(../img/bg-intro-triangle-desktop.svg);
+  }
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .sedona-promo {
+      background-image: url(../img/bg-back-desktop@2x.jpg);
+      background-size: 1200px auto;
+    }
   }
 }
