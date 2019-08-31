@@ -7,6 +7,7 @@
   position: fixed;
   top: 50%;
   left: 50%;
+  z-index: 10;
   transform: translate(-50%, -50%);
 
   text-align: center;
@@ -30,22 +31,6 @@
   color: #333333;
 }
 
-.failure-popup__close-btn {
-  width: 180px;
-  border: none;
-  padding: 16px 0;
-
-  font-size: 21px;
-  line-height: 26px;
-  font-weight: bold;
-  color: #ffffff;
-  text-transform: uppercase;
-
-  background-color: #81b3d2;
-
-  cursor: pointer;
-}
-
 @media (min-width: 768px) {
   .failure-popup {
     width: 400px;
@@ -62,9 +47,5 @@
 
   .failure-popup__text {
     margin-bottom: 35px;
-  }
-
-  .failure-popup__close-btn {
-    width: 272px;
   }
 }
