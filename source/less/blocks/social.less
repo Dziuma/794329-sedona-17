@@ -17,8 +17,8 @@
   display: inline-block;
 }
 
-.social__item:not(:first-child) {
-  margin-left: -3px;
+.social__item:not(:last-child) {
+  margin-right: 3px;
 }
 
 .social__link {
@@ -27,9 +27,14 @@
   display: block;
   width: 46px;
   height: 48px;
-  margin-right: 6px;
 
   background-color: #81b3d2;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: #669ec0;
+  }
 
   &::before {
     content: '';
@@ -59,8 +64,8 @@
     background-image: url(../img/icon-youtube.svg);
     background-size: 20px 14px;
   }
-}
 
-.social__item:last-child .social__link {
-  margin-right: 0;
+  &:active::before {
+    opacity: 0.3;
+  }
 }
