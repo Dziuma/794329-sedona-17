@@ -25,6 +25,17 @@
   display: block;
 }
 
+@media (min-width: 1200px) {
+  .main-nav__logo {
+    bottom: -41px;
+  }
+
+  .main-nav__logo-image {
+    width: 188px;
+    height: auto;
+  }
+}
+
 .main-nav__toggler {
   display: none;
 }
@@ -113,6 +124,10 @@
   .main-nav__list-item--active a:active {
     color: #766357;
     opacity: 0.3;
+  }
+
+  .main-nav__list-item:last-child .main-nav__list-link {
+    background-image: none;
   }
 }
 
