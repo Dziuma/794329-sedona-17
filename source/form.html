@@ -22,7 +22,7 @@
             <picture>
               <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
               <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
-              <img class="main-nav__logo-image" srcset="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип Седона">
+              <img class="main-nav__logo-image" src="img/logo-sedona-mobile.svg" srcset="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип Седона">
             </picture>
           </a>
           <button class="main-nav__toggler" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -71,15 +71,15 @@
 
             <fieldset class="form__item form__item--contacts">
             <legend class="form__item-description">Контактная информация:</legend>
-            <div class="form__item--contacts-wrapper">
+            <div class="form__item-contacts-wrapper">
               <div class="input-field">
                 <label for="phone-field"><span class="input-field__hide">Контактный</span> телефон<span>*</span>:</label>
                 <input id="phone-field" type="tel" name="phone" placeholder="Введите телефон" required="">
                 <span class="input-field__icon input-field__icon--phone"></span>
               </div>
               <div class="input-field">
-                <label for="surname-field">Электронная почта<span>*</span>:</label>
-                <input id="surname-field" type="email" name="surname" placeholder="Введите e-mail" required="">
+                <label for="email-field">Электронная почта<span>*</span>:</label>
+                <input id="email-field" type="email" name="email" placeholder="Введите e-mail" required="">
                 <span class="input-field__icon input-field__icon--mail"></span>
               </div>
             </div>
@@ -106,7 +106,7 @@
 
             <fieldset class="form__item form__item--sights">
               <legend class="form__item-description">Посещенные достопримечательности:</legend>
-              <ul class="form__item--sights-list">
+              <ul class="form__item-sights-list">
                 <li>
                   <label class="custom-checkbox">
                     <input class="custom-checkbox__input visually-hidden" type="checkbox" name="devils-bridge" checked="">
