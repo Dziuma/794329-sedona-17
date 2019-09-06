@@ -25,7 +25,8 @@
               <img class="main-nav__logo-image" src="img/logo-sedona-mobile.svg" srcset="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип Седона">
             </picture>
           </a>
-          <button class="main-nav__toggler" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <input class="main-nav__toggler" type="checkbox">
+          <button class="main-nav__button" type="button" aria-label="Открыть\закрить меню"></button>
           <ul class="main-nav__list">
             <li class="main-nav__list-item">
               <a class="main-nav__list-link" href="index.html">Главная</a>
@@ -56,11 +57,11 @@
               <ul class="form__item-wrapper">
                 <li>
                   <label for="name-field">Имя<span>*</span>:</label>
-                  <input id="name-field" type="text" name="name" placeholder="Петр" required="">
+                  <input id="name-field" type="text" name="name" placeholder="Петр">
                 </li>
                 <li>
                   <label for="surname-field">Фамилия<span>*</span>:</label>
-                  <input id="surname-field" type="text" name="surname" placeholder="Иванов" required="">
+                  <input id="surname-field" type="text" name="surname" placeholder="Иванов">
                 </li>
                 <li>
                   <label for="middle-name-field">Отчество:</label>
@@ -74,12 +75,12 @@
             <div class="form__item-contacts-wrapper">
               <div class="input-field">
                 <label for="phone-field"><span class="input-field__hide">Контактный</span> телефон<span>*</span>:</label>
-                <input id="phone-field" type="tel" name="phone" placeholder="Введите телефон" required="">
+                <input id="phone-field" type="tel" name="phone" placeholder="Введите телефон">
                 <span class="input-field__icon input-field__icon--phone"></span>
               </div>
               <div class="input-field">
                 <label for="email-field">Электронная почта<span>*</span>:</label>
-                <input id="email-field" type="email" name="email" placeholder="Введите e-mail" required="">
+                <input id="email-field" type="email" name="email" placeholder="Введите e-mail">
                 <span class="input-field__icon input-field__icon--mail"></span>
               </div>
             </div>
@@ -182,7 +183,10 @@
           <button class="button button--success-close" type="button">Закрыть окно</button>
         </div>
       </section>
-
     </div>
+
+    <div class="overlay"></div>
+
+    <script src="js/main.js"></script>
   </body>
 </html>
