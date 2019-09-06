@@ -37,6 +37,8 @@
 }
 
 .main-nav__button {
+  display: none;
+
   position: absolute;
   top: 14px;
   right: 17px;
@@ -54,49 +56,13 @@
     linear-gradient(to right, transparent 12px, white 12px, white 16px, transparent 16px);
 }
 
-.main-nav__toggler:checked ~ .main-nav__button {
+.main-nav__button.bars {
   width: 23px;
   height: 22px;
 
   transform: rotate(0);
 
   background-image: linear-gradient(#81b3d2 4px, transparent 4px, transparent 9px, #81b3d2 9px, #81b3d2 13px, transparent 13px, transparent 18px, #81b3d2 18px);
-}
-
-.main-nav__toggler {
-  position: absolute;
-  top: 14px;
-  right: 17px;
-  z-index: 2;
-
-  width: 27px;
-  height: 27px;
-  border: none;
-  outline: none;
-
-  opacity: 0;
-}
-
-@media (min-width: 768px) {
-  .main-nav__toggler,
-  .main-nav__button {
-    display: none;
-  }
-}
-
-.main-nav__toggler:active,
-.main-nav__toggler:focus {
-  outline: none;
-}
-
-.main-nav__toggler:checked ~ .main-nav__list {
-  display: none;
-}
-
-@media (min-width: 768px) {
-  .main-nav__toggler:checked ~ .main-nav__list {
-    display: block;
-  }
 }
 
 .main-nav__list {
