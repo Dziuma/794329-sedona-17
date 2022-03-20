@@ -4,31 +4,32 @@
     <meta charset="utf-8">
     <title>Седона</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/ptsans.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/ptsansbold.woff" as="font" type="font/woff" crossorigin>
     <script>
       // Picture element HTML5 shiv
       document.createElement( "picture" );
     </script>
-    <script src="js/picturefill.min.js" async></script>
+    <script src="js/picturefill.min.js" async=""></script>
   </head>
   <body>
-    <svg style="display:none">
-      <symbol viewBox="0 0 26.943 34.09" id="logo-htmlacademy">
-        <path d="M13.62.017L13.472 0 0 1.412v24.661l13.473 8.017 13.43-7.99.042-.025V1.412L13.62.017zm11.399 12.11L13.495 5.334l-.001-.104-.087.05-.088-.056v.109L1.925 12.118V3.147l11.548-1.212L25.02 3.147v8.98zm-11.614-5.34L24.923 13.5l-4.479 2.64-7.093-4.221-.014 1.415 5.904 3.513-.86.507-5.03-2.992-.014 1.415 3.827 2.275-.782.523-3.031-1.787-.014 1.413 1.853 1.091-1.8 1.081-11.356-6.751 11.371-6.835zm-11.48 8.34l11.411 6.791.016 1.044-7.942-4.728-.015 1.416 7.979 4.795.018 1.076-7.973-4.74-.013 1.414 8.021 4.822.046.025 8.143-4.872-.011-5.177 3.415-2.036v10.021L13.472 31.85 1.925 24.979v-9.852z"/>
-      </symbol>
-    </svg>
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <div class="page-wrapper">
       <header class="page-header">
         <nav class="main-nav">
           <a class="main-nav__logo" href="index.html">
             <picture>
-            <svg class="copyright__link-icon" width="26.943" height="34.09"><use xlink:href="#logo-htmlacademy"></use></svg>
               <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
               <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
-              <img class="main-nav__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип Седона">
+              <img class="main-nav__logo-image" src="img/logo-sedona-mobile.svg" srcset="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип Седона">
             </picture>
           </a>
-          <button class="main-nav__toggler" type="button">Открыть меню</button>
+          <button class="main-nav__button" type="button" aria-label="Открыть\закрить меню"></button>
           <ul class="main-nav__list">
             <li class="main-nav__list-item">
               <a class="main-nav__list-link" href="index.html">Главная</a>
@@ -36,8 +37,8 @@
             <li class="main-nav__list-item">
               <a class="main-nav__list-link" href="photo.html">Фото и видео</a>
             </li>
-            <li class="main-nav__list-item">
-              <a class="main-nav__list-link main-nav__list-item--active">Форма отзыва</a>
+            <li class="main-nav__list-item main-nav__list-item--active">
+              <a class="main-nav__list-link">Форма отзыва</a>
             </li>
             <li class="main-nav__list-item">
               <a class="main-nav__list-link" href="https://htmlacademy.ru/intensive/adaptive">html academy</a>
@@ -59,11 +60,11 @@
               <ul class="form__item-wrapper">
                 <li>
                   <label for="name-field">Имя<span>*</span>:</label>
-                  <input id="name-field" type="text" name="name" placeholder="Петр" required>
+                  <input id="name-field" type="text" name="name" placeholder="Петр">
                 </li>
                 <li>
                   <label for="surname-field">Фамилия<span>*</span>:</label>
-                  <input id="surname-field" type="text" name="surname" placeholder="Иванов" required>
+                  <input id="surname-field" type="text" name="surname" placeholder="Иванов">
                 </li>
                 <li>
                   <label for="middle-name-field">Отчество:</label>
@@ -74,15 +75,15 @@
 
             <fieldset class="form__item form__item--contacts">
             <legend class="form__item-description">Контактная информация:</legend>
-            <div class="form__item--contacts-wrapper">
+            <div class="form__item-contacts-wrapper">
               <div class="input-field">
                 <label for="phone-field"><span class="input-field__hide">Контактный</span> телефон<span>*</span>:</label>
-                <input id="phone-field" type="tel" name="phone" placeholder="Введите телефон" required>
+                <input id="phone-field" type="tel" name="phone" placeholder="Введите телефон">
                 <span class="input-field__icon input-field__icon--phone"></span>
               </div>
               <div class="input-field">
-                <label for="surname-field">Электронная почта<span>*</span>:</label>
-                <input id="surname-field" type="email" name="surname" placeholder="Введите e-mail" required>
+                <label for="email-field">Электронная почта<span>*</span>:</label>
+                <input id="email-field" type="email" name="email" placeholder="Введите e-mail">
                 <span class="input-field__icon input-field__icon--mail"></span>
               </div>
             </div>
@@ -91,7 +92,7 @@
             <fieldset class="form__item form__item--impression">
               <legend class="form__item-description">Ваше общее впечатление:</legend>
               <label class="custom-radio">
-                <input class="custom-radio__input visually-hidden" type="radio" name="impression" value="good" checked>
+                <input class="custom-radio__input visually-hidden" type="radio" name="impression" value="good" checked="">
                 <span class="custom-radio__mark"></span>
                 Скорее положительное
               </label>
@@ -109,24 +110,24 @@
 
             <fieldset class="form__item form__item--sights">
               <legend class="form__item-description">Посещенные достопримечательности:</legend>
-              <ul class="form__item--sights-list">
+              <ul class="form__item-sights-list">
                 <li>
                   <label class="custom-checkbox">
-                    <input class="custom-checkbox__input visually-hidden" type="checkbox" name="devils-bridge" checked>
+                    <input class="custom-checkbox__input visually-hidden" type="checkbox" name="devils-bridge" checked="">
                     <span class="custom-checkbox__mark"></span>
                     Мост Дьявола
                   </label>
                 </li>
                 <li>
                   <label class="custom-checkbox">
-                    <input class="custom-checkbox__input visually-hidden" type="checkbox" name="mountain-bell" checked>
+                    <input class="custom-checkbox__input visually-hidden" type="checkbox" name="mountain-bell" checked="">
                     <span class="custom-checkbox__mark"></span>
                     Гора-Колокол
                   </label>
                 </li>
                 <li>
                   <label class="custom-checkbox">
-                    <input class="custom-checkbox__input visually-hidden" type="checkbox" name="slide-park" checked>
+                    <input class="custom-checkbox__input visually-hidden" type="checkbox" name="slide-park" checked="">
                     <span class="custom-checkbox__mark"></span>
                     Слайд-парк
                   </label>
@@ -168,7 +169,7 @@
         <div class="page-footer__copyright copyright">
           <span class="copyright__text">Разработано</span>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Переход на сайт HTML Academy">
-            <svg class="copyright__link-icon" width="26.943" height="34.09" role="img"><use xlink:href="#logo-htmlacademy"></use></svg></a>
+            <svg class="copyright__link-icon" width="27" height="34" role="img"><use xlink:href="#logo-htmlacademy-sprite"></use></svg></a>
         </div>
       </footer>
 
@@ -185,7 +186,9 @@
           <button class="button button--success-close" type="button">Закрыть окно</button>
         </div>
       </section>
-
     </div>
+
+    <div class="overlay"></div>
+
   </body>
 </html>
